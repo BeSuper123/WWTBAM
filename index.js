@@ -149,12 +149,12 @@ app.post('/userAdd', function(req, res) {
     }
 })
 
-if (process.env.VERCEL) {
+//if (process.env.VERCEL) {
     // When deployed to Vercel, export the app as a module
     module.exports = app;
-} else {
+/*} else {
     // We need to set the requirements for the application to run
     app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0" , function(){
         console.log("App is Running ......... Yessssssssssssss!")
     });
-}
+}*/
