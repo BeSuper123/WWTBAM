@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({extended: true})) // parses form data
 
 // home page
 app.get('/', (req, res) => {
-    res.send("Express on Vercel");
+    //res.send("Express on Vercel");
 
     res.render("home"); 
 
