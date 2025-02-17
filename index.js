@@ -4,9 +4,7 @@ app.set('view engine', 'ejs'); // Set the template engine
 const path = require('path');  // Even if you don't like using it, it's very useful here!
 
 app.set('views', path.join(__dirname, 'views')); // Allow access to the views folder
-app.set('public', path.join(__dirname, 'public')); // Allow access to the CSS folder
-app.set('models', path.join(__dirname, 'models')); // Allow access to models folder
-app.set('partials', path.join(__dirname, 'partials')); // Allow access to partials folder
+app.use(express.static("public")); // Allow access to the CSS folder
 
 // allow access to the user code
 const User = require("./classes/addUser");
