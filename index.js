@@ -1,10 +1,12 @@
 const express = require('express'); // Call express to be used by the application
 const app = express(); // This is in place to make it easier to write express
 app.set('view engine', 'ejs'); // Set the template engine
-app.use(express.static("views")); // Allow access to the views folder
-app.use(express.static("public")); // Allow access to the CSS folder
-app.use(express.static("models")); // Allow access to models folder
-app.use(express.static("partials")) // Allow access to partials folder
+const path = require('path');  // Even if you don't like using it, it's very useful here!
+
+app.set('views', path.join(__dirname, 'views')); // Allow access to the views folder
+app.set('public', path.join(__dirname, 'public')); // Allow access to the CSS folder
+app.set('models', path.join(__dirname, 'models')); // Allow access to models folder
+app.set('partials', path.join(__dirname, 'partials')); // Allow access to partials folder
 
 // allow access to the user code
 const User = require("./classes/addUser");
@@ -23,8 +25,6 @@ app.use(bodyParser.urlencoded({extended: true})) // parses form data
 
 // home page
 app.get('/', (req, res) => {
-    res.send("Express on Vercel");
-
     res.render('home'); 
 
     console.log("\nI SEE THE HOME PAGE")
