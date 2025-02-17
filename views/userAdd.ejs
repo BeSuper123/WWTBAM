@@ -1,0 +1,30 @@
+<%- include('../partials/header') -%>
+
+    <script>
+        // JavaScript to set today's date
+        document.addEventListener("DOMContentLoaded", function() {
+            var today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+            document.getElementById("datePlayed").value = today;
+        });
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Enter Details</h1>
+        <form accept-charset="UTF-8" action="/userAdd" method="post">
+            <p>
+                <label for="username">Username:</label>
+                <input type="text" id="userInput" class="usernameAdd" name="user" required maxlength="10" placeholder="Enter Username">
+                
+                <label for="day">Date Today:</label>
+                <input type="date" class="dateAdd" name="datePlayed" required readonly id="datePlayed">
+                <h6><button class="btn">Add User</button></h6>
+            </p>
+
+        </form>
+    </center>
+
+    <%- include('../partials/footer') -%>
+
+</body>
+</html>

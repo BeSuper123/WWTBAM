@@ -1,0 +1,42 @@
+<%- include('../partials/header') -%>
+
+</head>
+<body>
+    <center><h1>Millionaire Attempts</h1></center>
+
+    <center>
+        <div id="user-list" style="border-radius:20px">
+            <table>
+                <thead>
+                    <tr>
+                        <th>USERNAME</th>
+                        <th>DATE PLAYED</th>
+                    </tr>
+                </thead>
+
+
+
+            <% try { %>
+                <thread>
+                    <% userList.forEach(function(players) { %>
+                        <tr>
+                            <th class="username"><b><%= players.user %></b></th>
+                            <th class="date"><%= players.datePlayed %></th>
+                        </tr>
+                    <% }); %>
+                </thread>
+            <% } catch(err) { %>
+                <p class="error">Error: message couldn't be printed</p>
+            <% } %>
+            </table>
+        </div>
+    </center>
+
+    <center>
+        <%- include('../partials/returnButton') -%>
+  
+        <%- include('../partials/footer') -%>
+
+    </center>
+</body>
+</html>

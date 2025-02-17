@@ -1,0 +1,29 @@
+<%- include('../partials/header') -%>
+    
+    <script type="text/javascript">
+        window.addEventListener("load", function() {
+            //for debugging
+            console.log("you lost");
+
+            lossReason();
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="heading">
+        <center>
+            <h2>You Losee!!</h2>
+
+            <h1>Guess you ain't a Millionaire &#128532;</h1>
+        </center>
+    </div>
+    
+    <center>
+        <%- include('../partials/returnButton') -%>
+  
+        <%- include('../partials/footer') -%>
+
+    </center>
+</body>
+</html>

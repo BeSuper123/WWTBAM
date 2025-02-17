@@ -1,0 +1,68 @@
+<%- include('../partials/header') -%>
+
+    <script type="text/javascript">
+        var second = 10;
+        
+        function myTimer() {
+            const timer = document.getElementById("timer");
+        
+            if (second > 0) {
+                second--;
+            } else if (second == 0) {
+                window.location.href = "/lose"; // Redirect to lose page
+            }
+
+            timer.innerText = `0${second}`;
+
+        }
+
+        window.onload = function() {
+
+            setInterval(myTimer, 1000);
+        };
+    </script>
+</head>
+<body>
+    <h5 id="score">€ <%= totalPoints %></h5>
+    <h5 id="timer">10</h5>
+    <div class="heading" style="padding-top: 10%;">
+    <%try { %>
+        <center>
+            <h2 id="qNo">Question <%= num %></h2>
+            <h1 id="quest"><%= randomQuestion.question %></h1>
+
+        </center>
+    </div>
+    <center>
+        <a id="ans1" class="btn" onclick="checkAns(1)"><%= randomQuestion.options[0] %></a>
+
+        <a id="ans2" class="btn" onclick="checkAns(2)"><%= randomQuestion.options[1] %></a>
+
+        <a id="ans3" class="btn" onclick="checkAns(3)"><%= randomQuestion.options[2] %></a>
+    
+    <% } catch(err) { %>
+        <p class="">Error: question couldn't be printed</p>
+    <% } %>
+    <script>
+        const randomQuestion = <%- JSON.stringify(randomQuestion) %>;
+
+        function checkAns(ans) {
+            // Compare the user’s selection with the correct answer
+            if (ans == randomQuestion.correctAns) {
+                // Correct!
+                window.location.href = "/game?correct=true"; // or "/game/next" or wherever your next route is
+                return 0;
+            } else {
+                // Wrong answer
+                window.location.href = "/lose";
+            }
+            return 0;
+        }
+
+    </script>
+
+    </center>
+    <%- include('../partials/footer') -%>
+
+</body>
+</html>
