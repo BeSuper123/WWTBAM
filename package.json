@@ -13,5 +13,14 @@
     "body-parser": "^1.20.3",
     "ejs": "^3.1.10",
     "express": "^4.21.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeSuper123/WWTBAM.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BeSuper123/WWTBAM/issues"
+  },
+  "homepage": "https://github.com/BeSuper123/WWTBAM#readme"
 }
