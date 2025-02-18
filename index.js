@@ -2,14 +2,13 @@ const express = require('express'); // Call express to be used by the applicatio
 const app = express(); // This is in place to make it easier to write express
 const serverless = require("serverless-http");
 app.set('view engine', 'ejs'); // Set the template engine
-const path = require('path');  // Even if you don't like using it, it's very useful here!
 
 app.use(express.static("views")); // Allow access to the CSS folder
 app.use(express.static("public")); // Allow access to the CSS folder
 
 // allow access to the user code
-const User = require("../classes/addUser");
-const Questions = require("../classes/quizGame");
+const User = require("./classes/addUser");
+const Questions = require("./classes/quizGame");
 
 const quiz = new Questions(); // initialise quiz
 var totalPoints = 0;
@@ -56,7 +55,7 @@ app.get('/game', (req, res) => {
         req.query.correct = "false";
     }
 
-    var allQuestions = require("../models/questions.json");
+    var allQuestions = require("./models/questions.json");
 
     do {
         number = Math.floor(Math.random() * allQuestions.length);
