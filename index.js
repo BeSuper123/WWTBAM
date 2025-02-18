@@ -5,6 +5,9 @@ const path = require('path');  // Even if you don't like using it, it's very use
 
 app.set('views', path.join(__dirname, 'views')); // Allow access to the views folder
 app.use(express.static("public")); // Allow access to the CSS folder
+app.use(express.static("models")); // Allow access to the CSS folder
+app.use(express.static("partials")); // Allow access to the CSS folder
+
 
 // allow access to the user code
 const User = require("./classes/addUser");
