@@ -4,7 +4,7 @@ const serverless = require("serverless-http");
 app.set('view engine', 'ejs'); // Set the template engine
 const path = require('path');  // Even if you don't like using it, it's very useful here!
 
-app.set('views', path.join(__dirname, 'views')); // Allow access to the views folder
+app.use(express.static("views")); // Allow access to the CSS folder
 app.use(express.static("public")); // Allow access to the CSS folder
 
 // allow access to the user code
