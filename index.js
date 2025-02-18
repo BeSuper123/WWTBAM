@@ -1,5 +1,4 @@
 const express = require('express'); // Call express to be used by the application
-app.use(express.urlencoded({ extended: true }));
 const app = express(); // This is in place to make it easier to write express
 app.set('view engine', 'ejs'); // Set the template engine
 const path = require('path');  // Even if you don't like using it, it's very useful here!

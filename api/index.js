@@ -1,4 +1,4 @@
 const serverless = require("serverless-http");
-const app = require('../index.js'); // import your Express app
+const app = require("../index"); // Import Express app
 
 module.exports = serverless(app);
