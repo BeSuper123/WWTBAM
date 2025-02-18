@@ -30,6 +30,7 @@ app.get('/', (req, res) => {
 
 // rules page
 app.get('/rules', (req, res) => {
+    res.sendFile("home.ejs");
     res.render("rules"); 
 
     console.log("\nI SEE THE RULES PAGE")
