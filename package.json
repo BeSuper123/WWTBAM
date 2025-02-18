@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/BeSuper123/WWTBAM/issues"
   },
-  "homepage": "https://github.com/BeSuper123/WWTBAM/blob/main/views/home.ejs"
+  "homepage": "https://github.com/BeSuper123/WWTBAM/blob/main/views/home.ejs",
+  "devDependencies": {
+    "vercel": "^41.1.4"
+  }
 }
