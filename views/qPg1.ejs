@@ -34,11 +34,11 @@
         </center>
     </div>
     <center>
-        <a id="ans1" class="btn" onclick="checkAns(1)"><%= randomQuestion.options[0] %></a>
+        <a id="ans1" class="btn" onclick="checkAns(0)"><%= options[0] %></a>
 
-        <a id="ans2" class="btn" onclick="checkAns(2)"><%= randomQuestion.options[1] %></a>
+        <a id="ans2" class="btn" onclick="checkAns(1)"><%= options[1] %></a>
 
-        <a id="ans3" class="btn" onclick="checkAns(3)"><%= randomQuestion.options[2] %></a>
+        <a id="ans3" class="btn" onclick="checkAns(2)"><%= options[2] %></a>
     
     <% } catch(err) { %>
         <p class="">Error: question couldn't be printed</p>
@@ -47,16 +47,16 @@
         const randomQuestion = <%- JSON.stringify(randomQuestion) %>;
 
         function checkAns(ans) {
+            console.log(`User selected: ${ans}, Correct Answer: ${randomQuestion.correctAns}`);
+
             // Compare the user’s selection with the correct answer
             if (ans == randomQuestion.correctAns) {
                 // Correct!
                 window.location.href = "/game?correct=true"; // or "/game/next" or wherever your next route is
-                return 0;
             } else {
                 // Wrong answer
                 window.location.href = "/lose";
             }
-            return 0;
         }
 
     </script>

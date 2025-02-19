@@ -1,182 +1,152 @@
 [
     { 
-        "id": 1, 
         "question": "What is the name of the artist that sang Watermelon Sugar?", 
         "options": ["Zane Low", "Harry Styles", "Zayn Malik"], 
-        "correctAns": 2 
+        "correctAns": 1
     },
     { 
-        "id": 2, 
         "question": "What is the name of the largest ocean in the world?", 
         "options": ["Atlantic", "Pacific", "Gulf of Mexico"], 
-        "correctAns": 2 
+        "correctAns": 1 
     },
     { 
-        "id": 3, 
         "question": "How many reindeer does Santa have?", 
         "options": ["6", "7", "8"], 
-        "correctAns": 3 
+        "correctAns": 2 
     },
     { 
-        "id": 4, 
         "question": "What do you call a shape with 5 sides?", 
         "options": ["Hexagon", "Octagon", "Pentagon"], 
-        "correctAns": 3 
+        "correctAns": 2 
     },
     { 
-        "id": 5, 
         "question": "Who is the founder of Microsoft?", 
         "options": ["Mark Zuckerburg", "Bill Gates", "Elon Musk"], 
-        "correctAns": 2 
+        "correctAns": 1 
     },
     { 
-        "id": 6, 
         "question": "How many dots are there on a die?", 
         "options": ["25", "21", "19"], 
-        "correctAns": 2 
+        "correctAns": 1 
     },
     { 
-        "id": 7, 
         "question": "What is the rarest blood type?", 
         "options": ["AB Negative", "AB Positive", "O Positive"], 
         "correctAns": 1 
     },
     { 
-        "id": 8, 
         "question": "What is the name of Harry Potter's pet owl?", 
         "options": ["Hedgewin", "Humpfrey", "Hedwig"], 
-        "correctAns": 3 
+        "correctAns": 2
     },
     { 
-        "id": 9, 
         "question": "How many bones are in the human body?", 
         "options": ["206", "204", "205"], 
-        "correctAns": 1 
+        "correctAns": 0 
     },
     { 
-        "id": 10, 
         "question": "What is the name of Shakespeare's shortest tragedy?", 
         "options": ["Othello", "Macbeth", "Hamlet"], 
-        "correctAns": 2 
+        "correctAns": 1
     },
     { 
-        "id": 11, 
         "question": "Who sang the song 'You Belong With Me'?", 
         "options": ["Mimi Webb", "Tate McRae", "Taylor Swift"], 
-        "correctAns": 3 
+        "correctAns": 2 
     },
     { 
-        "id": 12, 
         "question": "What year was the first iPhone released?", 
         "options": ["2006", "2007", "2009"], 
-        "correctAns": 2 
+        "correctAns": 1 
     },
     { 
-        "id": 13, 
         "question": "Which U.S. state is the largest?", 
         "options": ["Alaska", "Atlanta", "Hawaii"], 
-        "correctAns": 1 
+        "correctAns": 0 
     },
     { 
-        "id": 14, 
         "question": "What is the name of the social media platform that came out in 2003?", 
         "options": ["Vine", "MySpace", "Friendster"], 
-        "correctAns": 2 
+        "correctAns": 1 
     },
     { 
-        "id": 15, 
         "question": "What year did Barbie come out?", 
         "options": ["1974", "1982", "1959"], 
-        "correctAns": 3 
+        "correctAns": 2 
     },
     { 
-        "id": 16, 
         "question": "What does the Roman Numeral 'M' stand for?", 
         "options": ["100", "10,000", "1,000"], 
-        "correctAns": 3 
+        "correctAns": 2
     },
     { 
-        "id": 17, 
         "question": "What is the rarest M&M colour?", 
         "options": ["Green", "Brown", "Red"], 
-        "correctAns": 2 
+        "correctAns": 1 
     },
     { 
-        "id": 18, 
         "question": "What is Joe Biden's middle name?", 
         "options": ["Richard", "Ranson", "Robinette"], 
-        "correctAns": 3 
+        "correctAns": 2 
     },
     { 
-        "id": 19, 
         "question": "What is the chemical symbol for Gold?", 
         "options": ["Au", "Ag", "Al"], 
-        "correctAns": 1 
+        "correctAns": 0 
     },
     { 
-        "id": 20, 
         "question": "What is the only continent where coffee grows naturally?", 
         "options": ["Asia", "Europe", "Africa"], 
-        "correctAns": 3 
+        "correctAns": 2 
     },
     { 
-        "id": 21, 
         "question": "Who painted the ceiling of the Sistine Chapel?", 
         "options": ["Da Vinci", "Michelangelo", "Van Gogh"], 
-        "correctAns": 2 
+        "correctAns": 1 
     },
     { 
-        "id": 22, 
         "question": "What is the hardest natural substance on Earth?", 
         "options": ["Diamond", "Igneous", "Sedimentary"], 
-        "correctAns": 1 
+        "correctAns": 0 
     },
     { 
-        "id": 23, 
         "question": "What year did World War I begin?", 
         "options": ["1920", "1945", "1914"], 
-        "correctAns": 3 
+        "correctAns": 2 
     },
     { 
-        "id": 24, 
         "question": "What desert is the largest in the world?", 
         "options": ["Antarctic Desert", "Sahara Desert", "Arabian Desert"], 
-        "correctAns": 1 
+        "correctAns": 0 
     },
     { 
-        "id": 25, 
         "question": "What is the smallest country in the world?", 
         "options": ["Malta", "Vatican City", "Peru"], 
-        "correctAns": 2 
+        "correctAns": 1 
     },
     { 
-        "id": 26, 
         "question": "What is the term for a word that means the same as another word?", 
         "options": ["Synonym", "Acronym", "Verb"], 
-        "correctAns": 1 
+        "correctAns": 0 
     },
     { 
-        "id": 27, 
         "question": "What fruit is known as the 'King of Fruits'?", 
         "options": ["Durian", "Watermelon", "Strawberry"], 
+        "correctAns": 0 
+    },
+    { 
+        "question": "Which state is Area 51 located?", 
+        "options": ["Texas", "Nevada", "Wisconsin"], 
         "correctAns": 1 
     },
     { 
-        "id": 28, 
-        "question": "Which state is Area 51 located?", 
-        "options": ["Texas", "Nevada", "Wisconsin"], 
-        "correctAns": 2 
-    },
-    { 
-        "id": 29, 
         "question": "What colour is the 'Ex' in FedEx?", 
         "options": ["Purple", "Blue", "Orange"], 
-        "correctAns": 3 
+        "correctAns": 2 
     },
     { 
-        "id": 30, 
         "question": "How many stars are on the European Union flag?", 
         "options": ["15", "12", "13"], 
-        "correctAns": 2 
+        "correctAns": 1 
     }
 ]

@@ -52,7 +52,6 @@ app.get('/game', (req, res) => {
     if (req.query.correct == "true") {
         num++;
         totalPoints += 62500;
-        req.query.correct = "false";
     }
 
     var allQuestions = require("./models/questions.json");
@@ -68,15 +67,24 @@ app.get('/game', (req, res) => {
 
     questionsAsked.push(number);
 
-
     const randomQuestion = allQuestions[number];
     
-    console.log(randomQuestion.question)
+    console.log(randomQuestion.question);
+
+    // Shuffle options properly
+    var options = [...randomQuestion.options]; // Copy the options array
+    options.sort(() => Math.random() - 0.5); // Shuffle
+
+    // Find the new correct answer index
+    var correctNo = options.indexOf(randomQuestion.options[randomQuestion.correctAns]);
+
+    // Update the correct answer index
+    randomQuestion.correctAns = correctNo;
 
     if (num == 17) {
         res.redirect("/won");
     } else {
-        res.render("qPg1", {randomQuestion, totalPoints, num}); 
+        res.render("qPg1", {randomQuestion, options, totalPoints, num}); 
 
         console.log(num);
     }
