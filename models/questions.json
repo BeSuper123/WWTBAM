@@ -32,7 +32,7 @@
     { 
         "question": "What is the rarest blood type?", 
         "options": ["AB Negative", "AB Positive", "O Positive"], 
-        "correctAns": 1 
+        "correctAns": 0
     },
     { 
         "question": "What is the name of Harry Potter's pet owl?", 
@@ -70,7 +70,7 @@
         "correctAns": 1 
     },
     { 
-        "question": "What year did Barbie come out?", 
+        "question": "What year did Barbie first come out?", 
         "options": ["1974", "1982", "1959"], 
         "correctAns": 2 
     },
@@ -148,5 +148,60 @@
         "question": "How many stars are on the European Union flag?", 
         "options": ["15", "12", "13"], 
         "correctAns": 1 
+    },
+    { 
+        "question": "How many dots are there on a pair of dice?", 
+        "options": ["42", "45", "38"], 
+        "correctAns": 0
+    },
+    { 
+        "question": "What is acrophobia a fear of?", 
+        "options": ["Spiders", "Heights", "The Dark"], 
+        "correctAns": 1 
+    },
+    { 
+        "question": "What is the name of a word that reads the same backwards and forwards?", 
+        "options": ["Palendrome", "Palindrome", "Pal1ndrome"], 
+        "correctAns": 1
+    },
+    { 
+        "question": "Who played Ken in the latest Barbie Movie?", 
+        "options": ["Ryan Pitman", "Ryan Gosling", "Ryan Reynolds"], 
+        "correctAns": 1 
+    },
+    { 
+        "question": "Who is the Greek God of the sea?", 
+        "options": ["Apollo", "Zeus", "Poseidon"], 
+        "correctAns": 2
+    },
+    { 
+        "question": "What animal lives in a drey?", 
+        "options": ["Hedgehog", "Fox", "Squirrel"], 
+        "correctAns": 2
+    },
+    { 
+        "question": "Which part of the human body is the metacarpus located?", 
+        "options": ["Hand", "Neck", "Jaw"], 
+        "correctAns": 0
+    },
+    { 
+        "question": "How many rings are on the Olympic flag?", 
+        "options": ["Five", "Four", "Six"], 
+        "correctAns": 0
+    },
+    { 
+        "question": "Which British Nobility title is the highest?", 
+        "options": ["Earl", "Viscount", "Duke"], 
+        "correctAns": 2
+    },
+    { 
+        "question": "Where was Cleopatra's family from?", 
+        "options": ["Egypt", "Macedonia", "Italy"], 
+        "correctAns": 1
+    },
+    { 
+        "question": "What type of fruit is a pearmain?", 
+        "options": ["Apple", "Pear", "Plum"], 
+        "correctAns": 0
     }
 ]

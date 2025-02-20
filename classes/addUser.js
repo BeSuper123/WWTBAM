@@ -2,9 +2,10 @@ var fs = require('fs')
 
 module.exports = class User {
     
-    constructor (user, datePlayed) {
+    constructor (user, datePlayed, attempts) {
         this.user = user;
         this.datePlayed = datePlayed;
+        this.attempts = attempts;
     }
 
     addUser() {
@@ -13,7 +14,8 @@ module.exports = class User {
         // these next lines make a new user based on the text box inputs
         var newUser = {
             user: this.user,
-            datePlayed: this.datePlayed
+            datePlayed: this.datePlayed,
+            attempts: this.attempts
         };
 
         // this next line creates a function to write back to the file opened    
@@ -36,8 +38,6 @@ module.exports = class User {
             }
 
         });
-
-
     }
 
     static allUsers() {
@@ -49,6 +49,15 @@ module.exports = class User {
     errors() {
 
         return "An error has occured when adding user. Username cannot be left blank and must be unique!"
+
+    }
+
+    thankYous(wonGame) {
+        if (wonGame == true) {
+            return "Congrats on Winning"
+        } else {
+            return "Playing Hard Luck"
+        }
 
     }
 

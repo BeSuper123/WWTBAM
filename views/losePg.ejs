@@ -4,15 +4,14 @@
         window.addEventListener("load", function() {
             //for debugging
             console.log("you lost");
-
-            lossReason();
-            
         });
     </script>
 </head>
 <body>
     <div class="heading">
         <center>
+            <h5 id="score"> Attempts: <%- attempts -%></h5>
+
             <h2>You Losee!!</h2>
 
             <h1>Guess you ain't a Millionaire &#128532;</h1>
@@ -21,7 +20,7 @@
     
     <center>
         <%- include('partials/returnButton') -%>
-  
+
         <%- include('partials/footer') -%>
 
     </center>

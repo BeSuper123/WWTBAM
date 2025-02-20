@@ -99,12 +99,16 @@ tr:hover {
 
 .username {
     font-size: 1.2em;
-    margin-right: 10px; /* Adds space between name & date */
     color: #8a8a8a;
 }
 
 .date {
     font-size: 1.1em;
+    color: #8a8a8a;
+}
+
+.attempts {
+    font-size: 1.2em;
     color: #8a8a8a;
 }
 

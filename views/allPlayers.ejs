@@ -11,6 +11,7 @@
                     <tr>
                         <th>USERNAME</th>
                         <th>DATE PLAYED</th>
+                        <th>ATTEMPTS</th>
                     </tr>
                 </thead>
 
@@ -22,6 +23,7 @@
                         <tr>
                             <th class="username"><b><%= players.user %></b></th>
                             <th class="date"><%= players.datePlayed %></th>
+                            <th class="attempts"><%= players.attempts %></th>
                         </tr>
                     <% }); %>
                 </thread>
@@ -33,8 +35,10 @@
     </center>
 
     <center>
-        <%- include('partials/returnButton') -%>
-  
+        <section>
+            <a class="btn" href="/">Return to Home</a>
+        </section>
+          
         <%- include('partials/footer') -%>
 
     </center>

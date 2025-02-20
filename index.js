@@ -16,6 +16,9 @@ var num = 0;
 var increment = 0;
 var gameStarted = false;
 var questionsAsked = [];
+var attempts = 0;
+var user = "";
+var wonGame = false;
 
 // allows the the extraction of an incoming request and makes it available using req.body
 const bodyParser = require("body-parser");
@@ -26,6 +29,7 @@ app.get("/", (req, res) => {
     res.render("home"); 
 
     console.log("\nI SEE THE HOME PAGE")
+    attempts = 1;
 });
 
 // rules page
@@ -40,12 +44,14 @@ app.get('/start', (req, res) => {
     res.render("bufferStartGame"); 
 
     console.log("\nI SEE THE START PAGE")
+    attempts++;
 });
 
 // game page
 app.get('/game', (req, res) => {
     if (gameStarted == false) {
         num = 1;
+        attempts = 1;
     }
 
     gameStarted = true;
@@ -96,22 +102,23 @@ app.get('/game', (req, res) => {
 
 // lose page
 app.get('/lose', (req, res) => {
-    res.render("losePg"); 
+    res.render("losePg", {attempts}); 
 
     console.log("\nI SEE THE LOSS PAGE")
     num = 1;
     totalPoints = 0
+    wonGame = false;
 });
 
 // win page
 app.get('/won', (req, res) => {
-    res.render("winPg"); 
+    res.render("winPg", {attempts}); 
 
     console.log("\nI SEE THE WIN PAGE")
     num = 1;
     totalPoints = 0;
+    wonGame = true;
 });
-
 
 
 // ------------------------- winners SIDE ----------------- //
@@ -135,7 +142,8 @@ app.get('/userAdd', (req, res) => {
 // directs where each new user goes
 app.post('/userAdd', function(req, res) {
     const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
-    const newUser = new User(req.body.user, today)
+    const newUser = new User(req.body.user, today, attempts)
+    username = req.body.user;
 
     // this sends an error message when the user doesn't add a username or comment
     if (!req.body.user) {
@@ -151,11 +159,19 @@ app.post('/userAdd', function(req, res) {
     else {
         // adds user
         newUser.addUser()
+        var message = newUser.thankYous(wonGame)
         
-        console.log(`\nUser added: ${req.body.user}, Date Today: ${today}`);
-        res.redirect("/start"); // Redirect to players list
+        console.log(`\nUser added: ${req.body.user}, Date Today: ${today}, Attempts: ${attempts}`);
+        res.render("thankYou", {message, username}); // Redirect to players list
     }
 })
+
+// user add page
+app.get('/thankYou', (req, res) => {
+    res.render("userAdd"); 
+
+    console.log("\nWLCOME TO THE USER ADD PAGE")
+});
 
 process.on('uncaughtException', (err) => {
     console.error('Uncaught Exception:', err);

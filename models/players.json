@@ -1,150 +1,162 @@
 [
     {
         "user": "zomer",
-        "datePlayed": "2025-01-01"
+        "datePlayed": "2025-01-01",
+        "attempts": 1
     },
     {
         "user": "alex",
-        "datePlayed": "2025-01-02"
+        "datePlayed": "2025-01-02",
+        "attempts": 1
     },
     {
         "user": "blessing",
-        "datePlayed": "2025-01-03"
+        "datePlayed": "2025-01-03",
+        "attempts": 1
     },
     {
         "user": "sillyBilly",
-        "datePlayed": "2025-02-13"
+        "datePlayed": "2025-02-13",
+        "attempts": 4
     },
     {
         "user": "madhater",
-        "datePlayed": "2025-02-13"
+        "datePlayed": "2025-02-13",
+        "attempts": 1
     },
     {
         "user": "susan",
-        "datePlayed": "2025-02-13"
-    },
-    {
-        "user": "susan",
-        "datePlayed": "2025-02-13"
-    },
-    {
-        "user": "susan",
-        "datePlayed": "2025-02-13"
-    },
-    {
-        "user": "susan",
-        "datePlayed": "2025-02-13"
-    },
-    {
-        "user": "susan",
-        "datePlayed": "2025-02-13"
+        "datePlayed": "2025-02-13",
+        "attempts": 5
     },
     {
         "user": "drop table",
-        "datePlayed": "2025-02-13"
-    },
-    {
-        "user": "sillybilly",
-        "datePlayed": "2025-02-13"
+        "datePlayed": "2025-02-13",
+        "attempts": 1
     },
     {
         "user": "bobby",
-        "datePlayed": "2025-02-13"
+        "datePlayed": "2025-02-13",
+        "attempts": 1
     },
     {
         "user": "Bartek",
-        "datePlayed": "2025-02-14"
+        "datePlayed": "2025-02-14",
+        "attempts": 1
     },
     {
         "user": "Billybob",
-        "datePlayed": "2025-02-14"
-    },
-    {
-        "user": "Billybob",
-        "datePlayed": "2025-02-14"
+        "datePlayed": "2025-02-14",
+        "attempts": 2
     },
     {
         "user": "kori",
-        "datePlayed": "2025-02-14"
-    },
-    {
-        "user": "kori",
-        "datePlayed": "2025-02-14"
-    },
-    {
-        "user": "kori",
-        "datePlayed": "2025-02-14"
+        "datePlayed": "2025-02-14",
+        "attempts": 3
     },
     {
         "user": "imm",
-        "datePlayed": "2025-02-17"
-    },
-    {
-        "user": "sillyBilly",
-        "datePlayed": "2025-02-18"
+        "datePlayed": "2025-02-17",
+        "attempts": 1
     },
     {
         "user": "bectopia",
-        "datePlayed": "2025-02-19"
-    },
-    {
-        "user": "bectopia",
-        "datePlayed": "2025-02-19"
-    },
-    {
-        "user": "bectopia",
-        "datePlayed": "2025-02-19"
-    },
-    {
-        "user": "bectopia",
-        "datePlayed": "2025-02-19"
-    },
-    {
-        "user": "not bectop",
-        "datePlayed": "2025-02-19"
-    },
-    {
-        "user": "defonotreb",
-        "datePlayed": "2025-02-19"
-    },
-    {
-        "user": "bectopia",
-        "datePlayed": "2025-02-19"
-    },
-    {
-        "user": "anonomous",
-        "datePlayed": "2025-02-19"
-    },
-    {
-        "user": "anonymousx",
-        "datePlayed": "2025-02-19"
+        "datePlayed": "2025-02-19",
+        "attempts": 9
     },
     {
         "user": "barty",
-        "datePlayed": "2025-02-19"
+        "datePlayed": "2025-02-19",
+        "attempts": 1
     },
     {
         "user": "becstar",
-        "datePlayed": "2025-02-19"
+        "datePlayed": "2025-02-19",
+        "attempts": 1
     },
     {
         "user": "im a winne",
-        "datePlayed": "2025-02-19"
+        "datePlayed": "2025-02-19",
+        "attempts": 1
     },
     {
         "user": "rebeccafr",
-        "datePlayed": "2025-02-19"
+        "datePlayed": "2025-02-19",
+        "attempts": 1
     },
     {
         "user": "rebecca",
-        "datePlayed": "2025-02-19"
+        "datePlayed": "2025-02-19",
+        "attempts": 1
     },
     {
         "user": "jackenglis",
-        "datePlayed": "2025-02-19"
+        "datePlayed": "2025-02-19",
+        "attempts": 2
     },
     {
-        "user": "renée",
-        "datePlayed": "2025-02-19"
+        "user": "bow",
+        "datePlayed": "2025-02-19",
+        "attempts": 1
+    },
+    {
+        "user": "boe",
+        "datePlayed": "2025-02-19",
+        "attempts": 6
+    },
+    {
+        "user": "jack",
+        "datePlayed": "2025-02-19",
+        "attempts": 1
+    },
+    {
+        "user": "javk",
+        "datePlayed": "2025-02-19",
+        "attempts": 1
+    },
+    {
+        "user": "jack e",
+        "datePlayed": "2025-02-19",
+        "attempts": 1
+    },
+    {
+        "user": "jongles",
+        "datePlayed": "2025-02-19",
+        "attempts": 1
+    },
+    {
+        "user": "Gabe horn",
+        "datePlayed": "2025-02-19",
+        "attempts": 5
+    },
+    {
+        "user": "dyl",
+        "datePlayed": "2025-02-19",
+        "attempts": 2
+    },
+    {
+        "user": "rebecca",
+        "datePlayed": "2025-02-19",
+        "attempts": 1
+    },
+    {
+        "user": "bartek",
+        "datePlayed": "2025-02-19",
+        "attempts": 2
+    },
+    {
+        "user": "bartek",
+        "datePlayed": "2025-02-19",
+        "attempts": 2
+    },
+    {
+        "user": "ur mom",
+        "datePlayed": "2025-02-19",
+        "attempts": 2
+    },
+    {
+        "user": "rebrccs",
+        "datePlayed": "2025-02-19",
+        "attempts": 2
     }
 ]
