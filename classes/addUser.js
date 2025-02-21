@@ -29,7 +29,7 @@ module.exports = class User {
             else {
 
                 // these next lines of code send the new comment back to the file we opened above
-                userFile.push(newUser); // add the new data to the JSON file
+                userFile.unshift(newUser); // add the new data to the JSON file
 
                 var json = JSON.stringify(userFile, null, 4); // this line structures the JSON so it is easy on the eye
 
