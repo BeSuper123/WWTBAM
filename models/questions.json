@@ -203,5 +203,15 @@
         "question": "What type of fruit is a pearmain?", 
         "options": ["Apple", "Pear", "Plum"], 
         "correctAns": 0
+    },
+    { 
+        "question": "What temperature does water freeze at in Celcius?", 
+        "options": ["10", "100", "0"], 
+        "correctAns": 2
+    },
+    { 
+        "question": "What temperature does water boil at in Kelvin?", 
+        "options": ["300.5K", "373.2K", "100K"], 
+        "correctAns": 1
     }
 ]

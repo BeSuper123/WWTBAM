@@ -1,7 +1,7 @@
 <%- include('partials/header') -%>
 
     <script type="text/javascript">
-        var second = 10;
+        var second = 15;
         
         function myTimer() {
             const timer = document.getElementById("timer");
@@ -12,7 +12,7 @@
                 window.location.href = "/lose"; // Redirect to lose page
             }
 
-            timer.innerText = `0${second}`;
+            timer.innerText = `${second}`;
 
         }
 
@@ -24,7 +24,7 @@
 </head>
 <body>
     <h5 id="score">€ <%= totalPoints %></h5>
-    <h5 id="timer">10</h5>
+    <h5 id="timer">15</h5>
     <div class="heading" style="padding-top: 10%;">
     <%try { %>
         <center>
