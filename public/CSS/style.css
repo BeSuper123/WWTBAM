@@ -35,14 +35,6 @@ body {
     color: white;
     transition: 0.3s;
     text-decoration: none;
-        width: 80%;
-        height: 60px;
-        font-size: 1.5rem;
-        border-radius: 12px; /* Rounded corners */
-        margin: 10px 0;
-        padding: 10px;
-
-    
 }
 
 .btn:hover {
