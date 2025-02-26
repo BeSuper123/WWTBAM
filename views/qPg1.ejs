@@ -34,12 +34,14 @@
         </center>
     </div>
     <center>
-        <a id="ans1" class="btn" onclick="checkAns(0)"><%= options[0] %></a>
+        <div class="container">
+            <a id="ans1" class="btn" onclick="checkAns(0)"><%= options[0] %></a>
 
-        <a id="ans2" class="btn" onclick="checkAns(1)"><%= options[1] %></a>
+            <a id="ans2" class="btn" onclick="checkAns(1)"><%= options[1] %></a>
 
-        <a id="ans3" class="btn" onclick="checkAns(2)"><%= options[2] %></a>
-    
+            <a id="ans3" class="btn" onclick="checkAns(2)"><%= options[2] %></a>
+        </div>
+        
     <% } catch(err) { %>
         <p class="">Error: question couldn't be printed</p>
     <% } %>

@@ -23,14 +23,6 @@ body {
     flex: 1;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-}
-
 .btn {
     border: 2px solid white;
     font-size: 200%;
@@ -234,22 +226,29 @@ footer {
 
 /* Mobile Screens */
 @media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
 
     h1 {
         font-size: 2rem; /* Smaller text for mobile */
     }
 
     .btn {
-        font-size: 20px;
-        padding: 10px 20px;
-        width: 90%; /* Make buttons full width */
+        font-size: 20px; /* Slightly smaller text */
+        padding: 5px 15px; /* Reduced vertical padding */
+        width: auto; /* Adjust width dynamically */
+        height: auto; /* Let height adjust accordingly */
     }
 
     #user-list {
         font-size: 60%;
         width: 60%; 
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        margin-top: 20px;
     }
 }
