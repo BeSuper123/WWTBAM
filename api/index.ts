@@ -174,8 +174,10 @@ app.get('/thankYou', (req, res) => {
     console.log("\nWLCOME TO THE USER ADD PAGE")
 });
 
-app.get("/", (req, res) => res.send("Express on Vercel"));
-
-app.listen(3000, () => console.log("Server ready on port 3000."));
+// We need to set the requirements for the application to run
+app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0" , function(){
+    console.log("App is Running ......... Yessssssssssssss!")
+});
 
 module.exports = app;
+module.exports.handler = serverless(app); // ✅ Required for Vercel
