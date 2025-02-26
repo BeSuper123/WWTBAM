@@ -1,183 +1,157 @@
-const express = require('express'); // Call express to be used by the application
-const app = express(); // This is in place to make it easier to write express
-const serverless = require("serverless-http");
-app.set('view engine', 'ejs'); // Set the template engine
+import express, { Request, Response, NextFunction } from "express";
+import serverless from "serverless-http";
+import bodyParser from "body-parser";
+import User from "../classes/addUser"; // Ensure correct import
+const Questions = require("../classes/quizGame.js");
+import allQuestions from "../models/questions.json"; // Proper TypeScript import
 
-app.use(express.static("views")); // Allow access to the CSS folder
-app.use(express.static("public")); // Allow access to the CSS folder
+const app =  express();
 
-// allow access to the user code
-const User = require("./classes/addUser");
-const Questions = require("./classes/quizGame");
+app.set("view engine", "ejs");
+app.use(express.static("views"));
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-const quiz = new Questions(); // initialise quiz
+const quiz = new Questions();
 var totalPoints = 0;
 var num = 0;
 var increment = 0;
 var gameStarted = false;
-var number = 0; 
+var number = 0;
 var questionsAsked: number[] = [];
 var attempts = 0;
 var user = "";
 var wonGame = false;
 
-// allows the the extraction of an incoming request and makes it available using req.body
-const bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({extended: true})) // parses form data
-
-// home page
-app.get("/", (req, res) => {
-    res.render("home"); 
-
-    console.log("\nI SEE THE HOME PAGE")
+// 🏠 Home Page
+app.get("/", (req: Request, res: Response) => {
+    res.render("home");
+    console.log("\nI SEE THE HOME PAGE");
     attempts = 1;
 });
 
-// rules page
-app.get('/rules', (req, res) => {
-    res.render("rules"); 
-
-    console.log("\nI SEE THE RULES PAGE")
+// 📜 Rules Page
+app.get("/rules", (req: Request, res: Response) => {
+    res.render("rules");
+    console.log("\nI SEE THE RULES PAGE");
 });
 
-// start page
-app.get('/start', (req, res) => {
-    res.render("bufferStartGame"); 
-
-    console.log("\nI SEE THE START PAGE")
+// 🚀 Start Page
+app.get("/start", (req: Request, res: Response) => {
+    res.render("bufferStartGame");
+    console.log("\nI SEE THE START PAGE");
     attempts++;
 });
 
-// game page
-app.get('/game', (req, res) => {
-    if (gameStarted == false) {
+// 🎮 Game Page
+app.get("/game", (req: Request, res: Response) => {
+    if (!gameStarted) {
         num = 1;
         attempts = 1;
     }
-
+    
     gameStarted = true;
-    if (req.query.correct == "true") {
+
+    if (req.query.correct === "true") {
         num++;
         totalPoints += 62500;
     }
 
-    var allQuestions = require("./models/questions.json");
+    // Ensure allQuestions is properly loaded
+    if (!Array.isArray(allQuestions) || allQuestions.length === 0) {
+        return res.status(500).send("Error loading questions.");
+    }
 
     do {
         number = Math.floor(Math.random() * allQuestions.length);
-    } 
-    while (questionsAsked.includes(number))
-
-    if (questionsAsked.includes(number)) {
-        console.log("already asked");
-    }
+    } while (questionsAsked.includes(number));
 
     questionsAsked.push(number);
-
     const randomQuestion = allQuestions[number];
-    
+
     console.log(randomQuestion.question);
 
-    // Shuffle options properly
-    var options = [...randomQuestion.options]; // Copy the options array
-    options.sort(() => Math.random() - 0.5); // Shuffle
+    // Shuffle options
+    var options = [...randomQuestion.options];
+    options.sort(() => Math.random() - 0.5);
 
     // Find the new correct answer index
     var correctNo = options.indexOf(randomQuestion.options[randomQuestion.correctAns]);
-
-    // Update the correct answer index
     randomQuestion.correctAns = correctNo;
 
-    if (num == 17) {
+    if (num === 17) {
         res.redirect("/won");
     } else {
-        res.render("qPg1", {randomQuestion, options, totalPoints, num}); 
-
+        res.render("qPg1", { randomQuestion, options, totalPoints, num });
         console.log(num);
     }
 
-    console.log("\nI SEE THE GAME PAGE")
+    console.log("\nI SEE THE GAME PAGE");
 });
 
-
-
-// lose page
-app.get('/lose', (req, res) => {
-    res.render("losePg", {attempts}); 
-
-    console.log("\nI SEE THE LOSS PAGE")
+// ❌ Lose Page
+app.get("/lose", (req: Request, res: Response) => {
+    res.render("losePg", { attempts });
+    console.log("\nI SEE THE LOSS PAGE");
     num = 1;
-    totalPoints = 0
+    totalPoints = 0;
     wonGame = false;
 });
 
-// win page
-app.get('/won', (req, res) => {
-    res.render("winPg", {attempts}); 
-
-    console.log("\nI SEE THE WIN PAGE")
+// 🏆 Win Page
+app.get("/won", (req: Request, res: Response) => {
+    res.render("winPg", { attempts });
+    console.log("\nI SEE THE WIN PAGE");
     num = 1;
     totalPoints = 0;
     wonGame = true;
 });
 
-
-// ------------------------- winners SIDE ----------------- //
-
-// winners page
-app.get('/players', (req, res) => {
+// 🎉 Winners Page
+app.get("/players", (req: Request, res: Response) => {
     var userList = User.allUsers();
-
-    res.render("allPlayers", {userList}); 
-
-    console.log("\nI SEE THE PLAYER ATTEMPT PAGE")
+    res.render("allPlayers", { userList });
+    console.log("\nI SEE THE PLAYER ATTEMPT PAGE");
 });
 
-// user add page
-app.get('/userAdd', (req, res) => {
-    res.render("userAdd"); 
-
-    console.log("\nWLCOME TO THE USER ADD PAGE")
+// 👤 Add User Page
+app.get("/userAdd", (req: Request, res: Response) => {
+    res.render("userAdd");
+    console.log("\nWELCOME TO THE USER ADD PAGE");
 });
 
-// directs where each new user goes
-app.post('/userAdd', function(req, res) {
-    const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
-    const newUser = new User(req.body.user, today, attempts)
+// 📩 Handle User Submission
+app.post("/userAdd", (req: Request, res: Response) => {
+    const today = new Date().toISOString().split("T")[0];
+    const newUser = new User(req.body.user, today, attempts);
     var username = req.body.user;
 
-    // this sends an error message when the user doesn't add a username or comment
     if (!req.body.user) {
-  
-        var message = newUser.errors()
-    
-        res.render("error", {message})
-
-        console.log("\nERROR ERROR")
-    } 
-    
-    // this sends the thank you message to terminal
-    else {
-        // adds user
-        newUser.addUser()
-        var message = newUser.thankYous(wonGame)
-        
-        console.log(`\nUser added: ${req.body.user}, Date Today: ${today}, Attempts: ${attempts}`);
-        res.render("thankYou", {message, username}); // Redirect to players list
+        var message = newUser.errors();
+        res.render("error", { message });
+        console.log("\nERROR: Missing Username");
+    } else {
+        newUser.addUser();
+        var message = newUser.thankYous(wonGame);
+        console.log(`\nUser added: ${username}, Date: ${today}, Attempts: ${attempts}`);
+        res.render("thankYou", { message, username });
     }
-})
-
-// user add page
-app.get('/thankYou', (req, res) => {
-    res.render("userAdd"); 
-
-    console.log("\nWLCOME TO THE USER ADD PAGE")
 });
 
-// We need to set the requirements for the application to run
-app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0" , function(){
-    console.log("App is Running ......... Yessssssssssssss!")
+// 🛑 Error Handling Middleware
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+    console.error("Internal Server Error:", err.message);
+    res.status(500).send("Something went wrong!");
 });
 
-module.exports = app;
-module.exports.handler = serverless(app); // ✅ Required for Vercel
+const PORT: number = parseInt(process.env.PORT || "3000", 10);
+const HOST: string = process.env.IP || "0.0.0.0";
+
+app.listen(PORT, HOST, () => {
+    console.log(`✅ App is running on http://${HOST}:${PORT} ......... Yessssssssssssss!`);
+});
+
+
+// 🚀 Serverless Export for Vercel
+const handler = serverless(app);
+export {handler};
