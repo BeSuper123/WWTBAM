@@ -76,8 +76,8 @@ body {
 }
 
 #user-list {
-    margin: 5% 25%;
     margin-bottom: 10%;
+    width: 50%;
 }
 
 input, button {
@@ -88,7 +88,7 @@ input, button {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 0 auto;
+    margin: 0;
     font-size: 1.2em;
     text-align: center;
     background-color: #ffffff33;
@@ -246,5 +246,10 @@ footer {
         font-size: 20px;
         padding: 10px 20px;
         width: 90%; /* Make buttons full width */
+    }
+
+    #user-list {
+        font-size: 60%;
+        width: 60%; 
     }
 }
