@@ -1,5 +1,15 @@
 [
     {
+        "user": "Aimee",
+        "datePlayed": "2025-02-26",
+        "attempts": 7
+    },
+    {
+        "user": "testing :)",
+        "datePlayed": "2025-02-26",
+        "attempts": 1
+    },
+    {
         "user": "bartek",
         "datePlayed": "2025-02-21",
         "attempts": 4
