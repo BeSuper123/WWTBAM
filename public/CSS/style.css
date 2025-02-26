@@ -10,6 +10,7 @@ body {
     margin: 0;
     width: 100;
     padding: 0;
+    text-align: center;
 }
 
 .heading {
@@ -22,6 +23,14 @@ body {
     flex: 1;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
 .btn {
     border: 2px solid white;
     font-size: 200%;
@@ -32,12 +41,13 @@ body {
     text-decoration: none;
     width: 80%;
     height: 60px;
-    font-size: 1.5rem;
     border-radius: 12px;
     margin: 10px 20px;
-    padding: 10px 20px;
+    padding: 5px 10px;
     cursor: pointer;
-    font-size: 150%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn:hover {
@@ -49,16 +59,6 @@ body {
 
 .btn:active {
     background-color: #3c0101;
-}
-
-.buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
-    width: fit-content;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .rule-box {
@@ -76,7 +76,8 @@ body {
 }
 
 #user-list {
-    margin: 30px 30%;
+    margin: 5% 25%;
+    margin-bottom: 10%;
 }
 
 input, button {
@@ -211,11 +212,11 @@ footer {
 /* Default styles for Laptops (Large Screens) */
 @media (min-width: 1024px) {
     h1 {
-        font-size: 4rem; /* Bigger text for laptops */
+        font-size: 200%;
     }
     .btn {
         font-size: 2rem; /* Bigger buttons */
-        padding: 20px 40px;
+        padding: 10px 20px;
     }
 }
 
@@ -226,8 +227,8 @@ footer {
         font-size: 3rem;
     }
     .btn {
-        font-size: 1.8rem;
-        padding: 15px 30px;
+        font-size: 20px;
+        padding: 10px 20px;
     }
 }
 
@@ -242,8 +243,8 @@ footer {
     }
 
     .btn {
-        font-size: 1.5rem; /* Smaller buttons */
-        padding: 12px 25px;
+        font-size: 20px;
+        padding: 10px 20px;
         width: 90%; /* Make buttons full width */
     }
 }
