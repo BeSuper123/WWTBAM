@@ -151,7 +151,6 @@ app.listen(PORT, HOST, () => {
     console.log(`✅ App is running on http://${HOST}:${PORT} ......... Yessssssssssssss!`);
 });
 
-
 // 🚀 Serverless Export for Vercel
 const handler = serverless(app);
 export {handler};
