@@ -1,5 +1,25 @@
 [
     {
+        "user": "bartek",
+        "datePlayed": "2025-02-21",
+        "attempts": 4
+    },
+    {
+        "user": "osaid",
+        "datePlayed": "2025-02-21",
+        "attempts": 4
+    },
+    {
+        "user": "sillyBilly",
+        "datePlayed": "2025-02-21",
+        "attempts": 6
+    },
+    {
+        "user": "renee_best",
+        "datePlayed": "2025-02-21",
+        "attempts": 2
+    },
+    {
         "user": "bou",
         "datePlayed": "2025-02-21",
         "attempts": 5
@@ -17,7 +37,7 @@
     {
         "user": "rebrccs",
         "datePlayed": "2025-02-19",
-        "attempts": 2
+        "attempts": 4
     },
     {
         "user": "ur mom",
@@ -27,17 +47,7 @@
     {
         "user": "bartek",
         "datePlayed": "2025-02-19",
-        "attempts": 2
-    },
-    {
-        "user": "bartek",
-        "datePlayed": "2025-02-19",
-        "attempts": 2
-    },
-    {
-        "user": "rebecca",
-        "datePlayed": "2025-02-19",
-        "attempts": 1
+        "attempts": 4
     },
     {
         "user": "dyl",
@@ -85,11 +95,6 @@
         "attempts": 2
     },
     {
-        "user": "rebecca",
-        "datePlayed": "2025-02-19",
-        "attempts": 1
-    },
-    {
         "user": "im a winne",
         "datePlayed": "2025-02-19",
         "attempts": 1
@@ -110,11 +115,6 @@
         "attempts": 9
     },
     {
-        "user": "imm",
-        "datePlayed": "2025-02-17",
-        "attempts": 1
-    },
-    {
         "user": "kori",
         "datePlayed": "2025-02-14",
         "attempts": 3
@@ -127,16 +127,6 @@
     {
         "user": "Bartek",
         "datePlayed": "2025-02-14",
-        "attempts": 1
-    },
-    {
-        "user": "bobby",
-        "datePlayed": "2025-02-13",
-        "attempts": 1
-    },
-    {
-        "user": "drop table",
-        "datePlayed": "2025-02-13",
         "attempts": 1
     },
     {
@@ -168,5 +158,5 @@
         "user": "zomer",
         "datePlayed": "2025-01-01",
         "attempts": 1
-    }    
+    }
 ]

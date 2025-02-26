@@ -213,5 +213,35 @@
         "question": "What temperature does water boil at in Kelvin?", 
         "options": ["300.5K", "373.2K", "100K"], 
         "correctAns": 1
+    },
+    { 
+        "question": "Who was the first American president?", 
+        "options": ["Washington", "Lincoln", "Adams"], 
+        "correctAns": 0
+    },
+    { 
+        "question": "A scientist who studies rocks is called a what?", 
+        "options": ["Geologist", "Biophysicist", "Rock Lover"], 
+        "correctAns": 0
+    },
+    { 
+        "question": "How many years passed between the release of Avatar and its sequel, Avatar: The Way of Water?", 
+        "options": ["18", "13", "9"], 
+        "correctAns": 1
+    },
+    { 
+        "question": "What animal did Britney Spears famously carry on her shoulders during a performance?", 
+        "options": ["Dog", "Mouse", "Snake"], 
+        "correctAns": 2
+    },
+    { 
+        "question": "What was the first sport invented?", 
+        "options": ["Tennis", "Wrestling", "Cricket"], 
+        "correctAns": 1
+    },
+    { 
+        "question": "What is three strikes in a row is called in bowling?", 
+        "options": ["Triple Strike", "A Turkey", "Trick Question"], 
+        "correctAns": 1
     }
 ]
