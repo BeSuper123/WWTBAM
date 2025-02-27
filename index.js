@@ -102,9 +102,14 @@ app.get('/game', (req, res) => {
 
 // lose page
 app.get('/lose', (req, res) => {
-    res.render("losePg", {attempts}); 
+    if (attempts == 10) {
+        res.render("losePg2", {attempts});
+    } else {
+        res.render("losePg", {attempts}); 
+    }
 
     console.log("\nI SEE THE LOSS PAGE")
+
     num = 1;
     totalPoints = 0
     wonGame = false;
@@ -136,7 +141,7 @@ app.get('/players', (req, res) => {
 app.get('/userAdd', (req, res) => {
     res.render("userAdd"); 
 
-    console.log("\nWLCOME TO THE USER ADD PAGE")
+    console.log("\nWELCOME TO THE USER ADD PAGE")
 });
 
 // directs where each new user goes

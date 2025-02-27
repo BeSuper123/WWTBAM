@@ -1,0 +1,30 @@
+<%- include('partials/header') -%>
+    
+    <script type="text/javascript">
+        window.addEventListener("load", function() {
+            //for debugging
+            console.log("you lost");
+        });
+    </script>
+</head>
+<body>
+    <div class="heading">
+        <center>
+            <h5 id="score"> Attempts: <%- attempts -%></h5>
+
+            <h2>You Losee!!</h2>
+            <h3>You Ran out of Attempts</h3>
+
+            <h1>Guess you ain't a Millionaire &#128532;</h1>
+        </center>
+    </div>
+    
+    <center>
+        <section>
+            <a class="btn" href="/userAdd">Log User</a>
+        </section>
+        <%- include('partials/footer') -%>
+
+    </center>
+</body>
+</html>
